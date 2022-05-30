@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const mongoose = require('mongoose')
-/*const connection = require('./models/connection');*/
+/*const ConnectionModel = require('./models/ConnectionModel');*/
 
 /*mongoose.connect(process.env.URL, { useNewUrlParser: true });*/
 
