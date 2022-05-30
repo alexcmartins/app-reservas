@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <%- include('../partials/head'); %>
+    <!-- Custom styles for this template -->
+  </head>
+  <body class="d-flex h-100 text-center text-white">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Village Palma</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a
+              class="nav-link fw-bold py-1 px-0"
+              aria-current="page"
+              href="/index2"
+              >Home</a
+            >
+            <a class="nav-link fw-bold py-1 px-0 active" href="#">Menu</a>
+            <a class="nav-link fw-bold py-1 px-0" href="https://api.whatsapp.com/send?phone=351910277509">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">ENTRADAS</div>
+            <div class="col-sm">PRATOS CARNE</div>
+            <div class="row">
+              <div class="col-sm">GAMBAS À GUILLO</div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-toggle="popover"
+                data-bs-placement="right"
+                data-bs-custom-class="custom-popover"
+                title="GAMBAS À GUILLO"
+                data-bs-content="Camarões ao molho de manteiga com alho, vinho e limão."
+              >
+                GAMBAS À GUILLO
+              </button>
+              <div class="col-sm">BITOQUE</div>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-toggle="popover"
+                data-bs-placement="right"
+                data-bs-custom-class="custom-popover"
+                title="BITOQUE"
+                data-bs-content="Bife de alcatra ao molho do próprio, mostarda, acompanha arroz, batata frita e ovo estrelado."
+              >
+                BITOQUE
+              </button>
+              <div class="row">
+                <div class="col-sm">
+                  Camarões ao molho de manteiga com alho, vinho e limão.
+                </div>
+                <div class="col-sm-2">10,80€</div>
+                <div class="col-sm">
+                  Bife de alcatra ao molho do próprio, mostarda, acompanha
+                  arroz, batata frita e ovo estrelado.
+                </div>
+                <div class="col-sm-2">8,90€</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="GAMBAS À GUILLO"
+          data-bs-content="Camarões ao molho de manteiga com alho, vinho e limão."
+        >
+          GAMBAS À GUILLO
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="BITOQUE"
+          data-bs-content="Bife de alcatra ao molho do próprio, mostarda, acompanha arroz, batata frita e ovo estrelado."
+        >
+          BITOQUE
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="BITOQUE"
+          data-bs-content="Bife de alcatra ao molho do próprio, mostarda, acompanha arroz, batata frita e ovo estrelado."
+        >
+          BITOQUE
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="BITOQUE"
+          data-bs-content="Bife de alcatra ao molho do próprio, mostarda, acompanha arroz, batata frita e ovo estrelado."
+        >
+          BITOQUE
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="BITOQUE"
+          data-bs-content="Bife de alcatra ao molho do próprio, mostarda, acompanha arroz, batata frita e ovo estrelado."
+        >
+          BITOQUE
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-toggle="popover"
+          data-bs-placement="right"
+          data-bs-custom-class="custom-popover"
+          title="BITOQUE"
+          data-bs-content="Bife de alcatra ao molho do próprio, mostarda, acompanha arroz, batata frita e ovo estrelado."
+        >
+          BITOQUE
+        </button>
+      </main>
+
+      <script src="https://unpkg.com/@popperjs/core@2"></script>
+
+      <script>
+        const popoverTriggerList = document.querySelectorAll(
+          '[data-bs-toggle="popover"]'
+        );
+        const popoverList = [...popoverTriggerList].map(
+          (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+        );
+      </script>
+
+      <footer class="mt-auto text-white-50">
+        <%- include('../partials/footer'); %>
+      </footer>
+    </div>
+  </body>
+</html>

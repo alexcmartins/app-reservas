@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <%- include('../partials/head'); %>
+    <!-- Custom styles for this template -->
+  </head>
+  <body class="d-flex h-100 text-center text-white">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Village Palma</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a
+              class="nav-link fw-bold py-1 px-0 active"
+              aria-current="page"
+              href="#"
+              ><i class="bi bi-house"></i>Home</a
+            >
+            <a class="nav-link fw-bold py-1 px-0" href="/menu"
+              ><i class="bi bi-file-earmark-text"></i>Menu</a
+            >
+            <a class="nav-link fw-bold py-1 px-0" href="https://api.whatsapp.com/send?phone=351910277509"
+              ><i class="bi bi-telephone"></i>Contact</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <h1>Welcome!</h1>
+        <p class="lead">
+          Village Palma is Lisbon's new restaurant of Italian Portuguese cuisine.
+          Schedule your reservation and come and delight in our flavors! <br> Reservations <a href="tel:+351910277509" class="link-light">910 277 509</a>
+        </p>
+        <p class="lead">
+          <a
+            href="/menuPDF"
+            class="btn btn-lg btn-secondary fw-bold border-white bg-white"
+            >Menu</a>
+        </p>
+      </main>
+
+      <footer class="mt-auto text-white-50">
+        <%- include('../partials/footer'); %>
+      </footer>
+    </div>
+  </body>
+</html>

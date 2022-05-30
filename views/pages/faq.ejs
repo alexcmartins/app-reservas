@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+    <style>
+        
+        .accordion{
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background: rgb(102, 109, 109);
+            border-radius: 10px;
+        }
+        .accordion__question p{
+            margin: 5px;
+            padding: 0;
+            font-family: Verdana;
+            font-size: 20px;
+        }
+        .accordion__answer p{
+            margin: 5px;
+            padding: 10px;
+            font-size: large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(255, 255, 255);
+            background: rgb(125, 152, 165);
+            border-radius: 10px; 
+        }
+        .accordion:hover{
+            cursor: pointer;
+        }
+        .accordion__answer {
+            display: none;
+        } 
+        .accordion.active .accordion__answer {
+            display: block;
+        }
+    </style>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header2'); %>
+</header>
+
+<main>
+<!--<div class="row">
+    <div class="col-sm-8">
+        <div class="jumbotron">
+            <h1>This is great</h1>
+            <p>Welcome to templating using EJS</p>
+        </div>
+    </div>
+
+    <div class="col-sm-4">
+        <div class="well">
+            <h3>Look I'm A Sidebar!</h3>
+        </div>
+    </div>
+
+</div>-->
+<main>
+    <div class="jumbotron">
+        <h1>You need help?</h1>
+        <p>Read our FAQ carefully!</p>
+        <br>
+    
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>Where is Taj Mahal located?</p>
+      
+          </div>
+          <div class="accordion__answer">
+            <p>Taj Mahal is located in Agra, Uttar Pradesh.</p>
+          </div>
+        </div>
+      
+        <div class="accordion">
+          <div class="accordion__question">
+            <p>How many planets are there in solar system?</p>
+          </div>
+      
+          <div class="accordion__answer">
+            <p>
+              There are eight planets in solar system.
+              Mercury, Venus, Earth, Mars, Jupiter, Saturn,
+              Uranus, and Neptune.
+            </p>
+          </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+<script>
+    let answers=document.querySelectorAll(".accordion");
+    answers.forEach((event)=>{
+        event.addEventListener('click',()=>{
+            if(event.classList.contains("active")){
+                event.classList.remove("active");
+            }
+            else{
+                event.classList.add("active");
+            }
+        })
+    })
+</script>
+
+</body>
+</html>
