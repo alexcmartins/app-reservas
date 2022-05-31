@@ -27,6 +27,9 @@ db.on('error', err => {
 app.set('view engine', 'ejs');
 
 app.use(routes);
+app.use((req, res, next) => {
+  res.render('pages/error404')
+});
 
 /*app.get('/', (req, res) => {
   res.render('pages/index');
