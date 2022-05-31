@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const routes = require('./routes');
 const port = 3000;
 const mongoose = require('mongoose')
 /*const ConnectionModel = require('./models/ConnectionModel');*/
@@ -25,7 +26,9 @@ db.on('error', err => {
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
+app.use(routes);
+
+/*app.get('/', (req, res) => {
   res.render('pages/index');
 });
 
@@ -51,7 +54,7 @@ app.get('/faq', (req, res) => {
 
 app.get('/login', (req, res) => {
   res.render('pages/login');
-});
+});*/
 
 app.on('OK', () => {
   app.listen(port, () => {
