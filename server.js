@@ -15,6 +15,25 @@ mongoose.connect(process.env.URL, { useNewUrlParser: true })
   })
   .catch(e => console.log(e));
 
+  const session = require('express-session');
+  const MongoStore = require('connect-mongo');
+  const flash = require('connect-flash');
+
+  app.use(session({
+    secret: '152637485960',
+    //store: new MongoStore({ mongooseConnection: mongoose.Connection }),
+    store: MongoStore.create({ mongoUrl: process.env.URL}),
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 1000*60*60*24*2,
+      httpOnly: true}
+    })
+  );
+
+  //app.use(sessionOptions);
+  app.use(flash());
+
 /*const db = mongoose.connection
 db.once('open', _ => {
   console.log('Database connected:', URL)

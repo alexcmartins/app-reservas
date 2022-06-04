@@ -1,4 +1,5 @@
 exports.home = (req, res) => {
+  req.session.usuario = { nome: 'Alex', logado: true };
     res.render('pages/index2');
 };
 
